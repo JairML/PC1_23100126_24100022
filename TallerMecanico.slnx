@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TallerMecanico.API/TallerMecanico.API.csproj" />
+  <Project Path="TallerMecanico.CORE/TallerMecanico.CORE.csproj" />
+</Solution>
