@@ -1,0 +1,249 @@
+{
+  "info": {
+    "_postman_id": "a48f7066-2266-4aff-8e4e-1327327a5669",
+    "name": "TallerMecanico - PC1",
+    "description": "Colección de pruebas para los controladores TipoServicio (autogenerado) y OrdenServicio (patrón Repository). Variable {{baseUrl}} = http://localhost:5072",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54272537",
+    "_collection_link": "https://go.postman.co/collection/54272537-a48f7066-2266-4aff-8e4e-1327327a5669?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "TipoServicio (Autogenerado)",
+      "item": [
+        {
+          "name": "GET - Listar todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/TipoServicio",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "TipoServicio"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Por Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/TipoServicio/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "TipoServicio",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - Crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Cambio de filtro de aire\",\n  \"precioBase\": 60.00\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/TipoServicio",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "TipoServicio"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"nombre\": \"Cambio de aceite premium\",\n  \"precioBase\": 95.00\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/TipoServicio/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "TipoServicio",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/TipoServicio/5",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "TipoServicio",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "OrdenServicio (Repository)",
+      "item": [
+        {
+          "name": "GET - Listar todas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/OrdenServicio",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "OrdenServicio"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Por Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/OrdenServicio/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "OrdenServicio",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - Crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fechaIngreso\": \"2026-05-28T10:00:00\",\n  \"descripcionProblema\": \"Frenos hacen ruido al frenar\",\n  \"costoEstimado\": 150.00,\n  \"estado\": \"Pendiente\",\n  \"vehiculoId\": 1,\n  \"tipoServicioId\": 3\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/OrdenServicio",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "OrdenServicio"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"fechaIngreso\": \"2026-05-20T09:00:00\",\n  \"descripcionProblema\": \"Ruido en el motor al arrancar - revisado\",\n  \"costoEstimado\": 280.00,\n  \"estado\": \"En proceso\",\n  \"vehiculoId\": 1,\n  \"tipoServicioId\": 4\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/OrdenServicio",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "OrdenServicio"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/OrdenServicio/2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "OrdenServicio",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5072"
+    }
+  ]
+}
